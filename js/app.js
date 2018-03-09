@@ -17,14 +17,15 @@ function getLocation() {
 const getCoodinates = position => {
   const latitude =  position.coords.latitude;
   const longitude = position.coords.longitude;
-  //console.log(latitude, longitude);
+  console.log(latitude, longitude);
   getData(latitude, longitude);
 }
 
 const getData=(lat, lon)=>{
-  let url = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/c4d9a81218adf15a76b4861c56b81baf/${lat},${lon}?units=si`;
+  let url = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/9b0da51d75d97c56a18e0e3346fe4320/${lat},${lon}?units=si`;
   fetch(url)
-    .then(response => response.json()).then( json => drawWeather(json))
+    .then (response => response.json()).then( json => drawWeather(json))
+    .catch (function(){alert('Upps algo salio mal')})
 };
 
 const drawWeather=data=>{
