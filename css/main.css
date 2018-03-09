@@ -1,4 +1,3 @@
-.styleA {
-      background: $pideClubP8;
-      border-radius: 50%;
-    }
+body > section > div.row > div{
+  height: 400px;
+}
