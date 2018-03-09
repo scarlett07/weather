@@ -62,7 +62,7 @@ const drawWeather=data=>{
               <div>${unixDateToCurrentDate(day.time)}</div>
              <div>Icon: ${day.icon}</div>
              <div>Temperature-high: ${day.temperatureHigh} and Temperature-min: ${day.temperatureMin}</>`;
-          week.innerHTML=currentDay;
+          week.insertAdjacentHTML('beforeend', currentDay);
       });
 
 
